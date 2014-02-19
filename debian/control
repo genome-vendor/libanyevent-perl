@@ -1,0 +1,30 @@
+Source: libanyevent-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl
+Maintainer: Anthony Brummett <abrummet@genome.wustl.edu>
+Standards-Version: 3.8.3
+Homepage: http://search.cpan.org/dist/AnyEvent/
+
+Package: libanyevent-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}
+Description: the DBI of event loop programming
+ AnyEvent provides a uniform interface to various event loops. This allows
+ module authors to use event loop functionality without forcing module users
+ to use a specific event loop implementation (since more than one event loop
+ cannot coexist peacefully).
+ .
+ The interface itself is vaguely similar, but not identical to the Event
+ module.
+ .
+ During the first call of any watcher-creation method, the module tries to
+ detect the currently loaded event loop by probing whether one of the
+ following modules is already loaded: EV, AnyEvent::Impl::Perl, Event, Glib,
+ Tk, Event::Lib, Qt, POE. The first one found is used. If none are detected,
+ the module tries to load the first four modules in the order given; but note
+ that if EV is not available, the pure-perl AnyEvent::Impl::Perl should always
+ work, so the other two are not normally tried.
+ .
+ This description was automagically extracted from the module by dh-make-perl.
